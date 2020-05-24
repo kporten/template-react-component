@@ -8,6 +8,8 @@
 
 ![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)
 
+![ci](https://github.com/kporten/template-react-component/workflows/CI/badge.svg?branch=master&event=push)
+
 Template to develop a React component
 
 ## Requirements
