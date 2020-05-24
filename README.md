@@ -21,16 +21,24 @@ yarn install
 yarn start
 ```
 
-## Scripts
+## Development Scripts
 
 ```bash
 yarn start # start development server
-yarn test # execute your Jest tests
-yarn lint # lint your code with ESLint
+yarn test # run jest tests
+yarn lint # lint code with eslint
 yarn build # build production-ready component
-yarn tsc:check # execute type check for your files
+yarn tsc:check # run type check for files
 yarn commit # commitizen friendly commit
 ```
+
+## CI Scripts
+
+```bash
+yarn test:ci # run jest tests in ci mode
+```
+
+> This template contains a GitHub CI workflow that runs on push (except for tags) and pull request events.
 
 ## Publish
 
