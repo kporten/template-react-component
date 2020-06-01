@@ -29,6 +29,7 @@ yarn start
 yarn start # start development server
 yarn test # run jest tests
 yarn lint # lint code with eslint
+yarn hint # hints for code with webhint
 yarn build # build production-ready component
 yarn tsc:check # run type check for files
 yarn commit # commitizen friendly commit
@@ -56,6 +57,7 @@ yarn test:ci # run jest tests in ci mode
 ### Quality
 
 - [ESLint](https://eslint.org/)
+- [WebHint](https://webhint.io/)
 - [Prettier](https://prettier.io/)
 
 ### Tests

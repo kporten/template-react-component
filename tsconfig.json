@@ -5,6 +5,7 @@
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
     "isolatedModules": true,
     "jsx": "react",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -12,10 +13,11 @@
     "moduleResolution": "node",
     "noEmit": true,
     "outDir": "dist",
+    "removeComments": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es5"
+    "target": "es2017"
   },
   "include": ["src"]
 }
