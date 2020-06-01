@@ -27,6 +27,6 @@ jobs:
       - name: Check for vulnerabilities
         uses: snyk/actions/node@master
         with:
-          args: --dev --severity-threshold=high
+          args: --dev --severity-threshold=high --fail-on=all
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
