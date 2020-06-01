@@ -1,6 +1,6 @@
 {
   "name": "template-react-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "license": "Unlicense",
   "description": "Template to develop a React component",
