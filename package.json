@@ -19,6 +19,7 @@
     "tsc:check": "tsc --project ./tsconfig.json",
     "version": "auto-changelog --package --template keepachangelog --sort-commits relevance && git add CHANGELOG.md",
     "postversion": "git push --follow-tags",
+    "prepublish": "yarn build",
     "commit": "git-cz"
   },
   "main": "./dist/lib/index.js",
