@@ -2,7 +2,7 @@
   "name": "template-react-component",
   "version": "1.0.4",
   "private": false,
-  "license": "Unlicense",
+  "license": "MIT",
   "description": "Template to develop a React component",
   "repository": "https://github.com/kporten/template-react-component.git",
   "bugs": "https://github.com/kporten/template-react-component/issues",
