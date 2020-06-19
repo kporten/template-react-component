@@ -30,6 +30,7 @@
     "spaced-comment": ["error", "always", { "markers": ["/"] }],
     "unicorn/filename-case": "off",
     "unicorn/import-index": ["error", { "ignoreImports": true }],
+    "unicorn/no-null": "off",
     "unicorn/prevent-abbreviations": "off"
   }
 }
