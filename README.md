@@ -43,6 +43,15 @@ yarn test:ci # run jest tests in ci mode
 
 > This template contains a GitHub CI workflow that runs on push (except for tags) and pull request events.
 
+## Secrets
+
+You will need to define the following secrets to use this project with the initial CI workflow configuration.
+
+```ini
+# GitHub > Repository > Settings > Secrets
+SNYK_TOKEN=... # https://support.snyk.io/hc/en-us/articles/360004037537-Authentication-for-third-party-tools
+```
+
 ## Publish
 
 1. Build your production-ready component with `yarn build`
