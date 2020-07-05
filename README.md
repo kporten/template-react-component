@@ -68,6 +68,7 @@ SNYK_TOKEN=... # https://support.snyk.io/hc/en-us/articles/360004037537-Authenti
 - [ESLint](https://eslint.org/)
 - [WebHint](https://webhint.io/)
 - [Prettier](https://prettier.io/)
+- [Snyk](https://snyk.io/)
 
 ### Tests
 
