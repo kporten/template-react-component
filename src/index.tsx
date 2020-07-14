@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Library from './lib';
+import Playground from './Playground';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Library />
+    <Playground />
   </React.StrictMode>,
-  document.querySelector('#root'),
+  document.querySelector('#playground'),
 );

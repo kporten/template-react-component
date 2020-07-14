@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import MyComponent from './MyComponent';
 
-it('render my component', () => {
-  const { getByRole } = render(<MyComponent />);
-  expect(getByRole('heading')).toBeInTheDocument();
+it('renders my component', () => {
+  const { getByRole } = render(<MyComponent headline="test" />);
+  expect(getByRole('heading')).toBeVisible();
 });

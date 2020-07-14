@@ -1,5 +1,4 @@
-// https://www.typescriptlang.org/tsconfig
 {
   "extends": "./tsconfig.json",
-  "exclude": ["**/*.test.ts", "**/*.test.tsx"]
+  "exclude": ["**/*.test.*", "*.js"]
 }

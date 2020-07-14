@@ -30,9 +30,11 @@ yarn start # start development server
 yarn test # run jest tests
 yarn lint # lint code with eslint
 yarn hint # hints for code with webhint
+yarn type-check # run type check for files
+yarn docs # create/update the docs
+yarn changelog # create/update the changelog
 yarn build # build production-ready component
-yarn tsc:check # run type check for files
-yarn commit # commitizen friendly commit
+yarn commit # commitizen friendly commit helper
 ```
 
 ## CI Scripts
@@ -41,7 +43,7 @@ yarn commit # commitizen friendly commit
 yarn test:ci # run jest tests in ci mode
 ```
 
-> This template contains a GitHub CI workflow that runs on push (except for tags) and pull request events.
+> This project contains a GitHub CI workflow that runs on push (except for tags) and pull request events.
 
 ## Secrets
 
@@ -52,11 +54,20 @@ You will need to define the following secrets to use this project with the initi
 SNYK_TOKEN=... # https://support.snyk.io/hc/en-us/articles/360004037537-Authentication-for-third-party-tools
 ```
 
+## Code Documentation
+
+[Click here to view the documentation](./docs/README.md)
+
+## Helpful Resources
+
+- [React+TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
+
 ## Publish
 
-1. Build your production-ready component with `yarn build`
-2. Create a new version with `yarn version`
-3. Publish your component to the registry with `yarn publish`
+1. If you use external packages/dependencies, check if they should be added to your `rollup.config.js` in `external` and to your `package.json` in `peerDependencies` and `devDependencies`.
+2. Build your production-ready component with `yarn build`
+3. Create a new version with `yarn version`
+4. Publish your component to the registry with `yarn publish`
 
 ## Environment
 
@@ -77,5 +88,6 @@ SNYK_TOKEN=... # https://support.snyk.io/hc/en-us/articles/360004037537-Authenti
 
 ### Other
 
+- [Rollup](https://rollupjs.org/guide/en/)
 - [Commitizen](http://commitizen.github.io/cz-cli/)
 - [Auto Changelog](https://github.com/CookPete/auto-changelog)
