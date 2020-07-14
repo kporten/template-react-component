@@ -1,11 +1,11 @@
 import React from 'react';
 
-const MyComponent: React.FC = () => {
-  return (
-    <div>
-      <h1>My Component</h1>
-    </div>
-  );
+type MyComponentProps = {
+  headline: string;
+};
+
+const MyComponent: React.FC<MyComponentProps> = ({ headline }) => {
+  return <h1>{headline}</h1>;
 };
 
 export default MyComponent;

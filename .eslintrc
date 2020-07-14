@@ -1,6 +1,9 @@
 // https://github.com/iamturns/eslint-config-airbnb-typescript
 {
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "extends": [
     "react-app",
     "airbnb-typescript",
@@ -17,9 +20,6 @@
     "prettier/@typescript-eslint",
     "prettier/unicorn"
   ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "off",
     "global-require": "off",
