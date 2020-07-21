@@ -9,8 +9,8 @@
   "author": "Kevin Porten <hello@kevinporten.dev>",
   "scripts": {
     "start": "react-scripts start",
-    "test": "react-scripts test --coverage --notify",
-    "test:ci": "CI=true yarn test",
+    "test": "react-scripts test --watchAll --coverage --collectCoverageFrom src/lib/**/* --notify",
+    "test:ci": "CI=true react-scripts test",
     "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "hint": "hint ./src/lib",
     "type-check": "tsc --project ./tsconfig.json",
