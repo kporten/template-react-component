@@ -18,7 +18,7 @@
 
 Ƭ **MyComponentProps**: *object*
 
-*Defined in [MyComponent.tsx:3](https://github.com/kporten/template-react-component/blob/a239110/src/lib/MyComponent.tsx#L3)*
+*Defined in [MyComponent.tsx:3](https://github.com/kporten/template-react-component/blob/5b71b05/src/lib/MyComponent.tsx#L3)*
 
 #### Type declaration:
 
@@ -30,7 +30,7 @@
 
 ▸ **MyComponent**(`__namedParameters`: object): *Element‹›*
 
-*Defined in [MyComponent.tsx:7](https://github.com/kporten/template-react-component/blob/a239110/src/lib/MyComponent.tsx#L7)*
+*Defined in [MyComponent.tsx:7](https://github.com/kporten/template-react-component/blob/5b71b05/src/lib/MyComponent.tsx#L7)*
 
 **Parameters:**
 
