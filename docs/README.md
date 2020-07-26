@@ -6,5 +6,5 @@
 
 ### Modules
 
-* ["MyComponent"](modules/_mycomponent_.md)
+* ["Component"](modules/_component_.md)
 * ["index"](modules/_index_.md)

@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import MyComponent from './MyComponent';
+import Component from './Component';
 
 it('renders my component', () => {
-  const { getByRole } = render(<MyComponent headline="test" />);
+  const { getByRole } = render(<Component headline="test" />);
   expect(getByRole('heading')).toBeVisible();
 });
