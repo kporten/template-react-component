@@ -14,15 +14,14 @@
     "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "hint": "hint ./src/lib",
     "type-check": "tsc --project ./tsconfig.json",
-    "docs": "rimraf docs && typedoc ./src/lib",
     "changelog": "auto-changelog --package --template keepachangelog --sort-commits relevance",
+    "docs": "rimraf docs && typedoc ./src/lib",
     "build": "rimraf dist && yarn build:declaration && yarn build:bundle",
     "build:bundle": "rollup -c",
     "build:declaration": "tsc --project tsconfig.build.json --noEmit false --emitDeclarationOnly && rimraf dist/*.d.ts",
     "commit": "git-cz",
-    "version": "yarn changelog && yarn docs && git add CHANGELOG.md docs/*",
-    "postversion": "git push --follow-tags",
-    "prepublish": "yarn build"
+    "version": "yarn build && yarn changelog && yarn docs && git add CHANGELOG.md docs/*",
+    "postversion": "git push --follow-tags && yarn publish --non-interactive"
   },
   "main": "./dist/lib/index.js",
   "module": "./dist/lib/index.es.js",

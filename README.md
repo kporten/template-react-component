@@ -6,7 +6,9 @@
 ![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)
 ![ci](https://github.com/kporten/template-react-component/workflows/CI/badge.svg?branch=master&event=push)
 
-Template to develop a React component.
+Template to develop a React component with TypeScript.
+
+---
 
 ## Getting Started
 
@@ -18,7 +20,7 @@ npm install template-react-component
 
 ### Example
 
-> TypeScript
+`Example.tsx`
 
 ```tsx
 import React from 'react';
@@ -31,22 +33,26 @@ const Example: React.FC = () => {
 export default Example;
 ```
 
-[Click here to view the full documentation](./docs/README.md)
+### Documentation
+
+[Click here to view the documentation](./docs/README.md)
+
+---
 
 ## Contribute
 
 ### Requirements
 
-[Yarn 1 (Classic)](https://classic.yarnpkg.com/lang/en/)
+- [Node.js](https://nodejs.org/en/)
+- [Yarn 1 (Classic)](https://classic.yarnpkg.com/lang/en/)
 
 ### Install
 
 ```sh
 yarn install
-yarn start
 ```
 
-### Development Scripts
+### Scripts
 
 ```sh
 yarn start # start development server
@@ -54,58 +60,76 @@ yarn test # run jest tests
 yarn lint # lint code with eslint
 yarn hint # hints for code with webhint
 yarn type-check # run type check for files
-yarn docs # create/update the docs
 yarn changelog # create/update the changelog
+yarn docs # create/update the docs
 yarn build # build production-ready component
 yarn commit # commitizen friendly commit helper
 ```
 
-### CI Scripts
+### GitHub Actions
 
-```sh
-yarn test:ci # run jest tests in ci mode
-```
-
-> This project contains a GitHub CI workflow that runs on push (except for tags) and pull request events.
-
-### Secrets
-
-You will need to define the following secrets to use this project with the initial CI workflow configuration.
+You will need to define the following secrets to use this project with the initial workflow configuration.
 
 ```ini
 # GitHub > Repository > Settings > Secrets
 SNYK_TOKEN=... # https://support.snyk.io/hc/en-us/articles/360004037537-Authentication-for-third-party-tools
 ```
 
-### Helpful Resources
+#### Jobs
 
-- [React+TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
+- test (run jest tests)
+- security (check for vulnerabilities)
 
 ### Publish
 
 1. For external packages/dependencies, check if they should be added to your `rollup.config.js` in `external` and to your `package.json` in `peerDependencies` and `devDependencies`.
-2. Build your production-ready component with `yarn build`
-3. Create a new version with `yarn version`
-4. Publish your component to the registry with `yarn publish`
+2. Create a new version and publish your component to the registry with `yarn version`.
 
-### Environment
+On **commit** (git), the following commands are executed...
+
+- Hook `pre-commit`
+  - `yarn type-check`
+  - `yarn lint`
+  - `yarn hint`
+- Hook `commit-msg`
+  - `commitlint`
+
+On **push** (git), the following commands are executed...
+
+- Hook `pre-push`
+  - `yarn test:ci`
+
+On **publish** (yarn), the following commands are executed...
+
+- Lifecycle method `version`
+  - `yarn build` (`yarn build:bundle` + `yarn build:declaration`)
+  - `yarn changelog`
+  - `yarn docs`
+  - `git add`
+- Lifecycle method `postversion`
+  - `git push`
+  - `yarn publish`
+
+---
+
+## Environment
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [Create React App](https://create-react-app.dev/)
 
-#### Quality
+### Quality
 
 - [ESLint](https://eslint.org/)
 - [WebHint](https://webhint.io/)
 - [Prettier](https://prettier.io/)
 - [Snyk](https://snyk.io/)
 
-#### Tests
+### Tests
 
 - [Testing Library](https://testing-library.com/)
 - [Jest](https://jestjs.io/)
 
-#### Other
+### Other
 
 - [Rollup](https://rollupjs.org/guide/en/)
 - [Commitizen](http://commitizen.github.io/cz-cli/)
