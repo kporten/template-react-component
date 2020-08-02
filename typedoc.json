@@ -1,5 +1,5 @@
 {
-  "exclude": "src/lib/*.test.*",
+  "exclude": ["src/lib/**/*.test.*"],
   "mode": "modules",
   "out": "docs",
   "plugin": "typedoc-plugin-markdown",

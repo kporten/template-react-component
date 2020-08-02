@@ -4,20 +4,20 @@ import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 
-import pkg from './package.json';
-
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 export default {
   input: './src/lib/index.tsx',
   output: [
     {
-      file: pkg.main,
+      entryFileNames: '[name].[format].js',
+      dir: './dist/lib',
       format: 'cjs',
       exports: 'auto',
     },
     {
-      file: pkg.module,
+      entryFileNames: '[name].[format].js',
+      dir: './dist/lib',
       format: 'es',
       exports: 'auto',
     },
