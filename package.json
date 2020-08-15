@@ -9,7 +9,8 @@
   "author": "Kevin Porten <hello@kevinporten.dev>",
   "scripts": {
     "start": "react-scripts start",
-    "test": "react-scripts test --watchAll --coverage --collectCoverageFrom 'src/lib/**/*.tsx' --notify",
+    "test": "react-scripts test --watch --notify",
+    "test:all": "react-scripts test --watchAll --coverage --collectCoverageFrom 'src/lib/**/*.tsx' --notify",
     "test:ci": "CI=true react-scripts test",
     "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "hint": "hint ./src/lib",

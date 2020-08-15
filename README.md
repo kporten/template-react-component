@@ -56,7 +56,8 @@ yarn install
 
 ```sh
 yarn start # start development server
-yarn test # run jest tests
+yarn test # run jest tests and watch
+yarn test:all # run jest tests and watch all with coverage
 yarn lint # lint code with eslint
 yarn hint # hints for code with webhint
 yarn type-check # run type check for files
