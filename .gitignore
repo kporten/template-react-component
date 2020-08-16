@@ -9,8 +9,8 @@
 *.log
 
 # production
-/build
 /dist
+/storybook-static
 
 # misc
 .DS_Store

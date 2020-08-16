@@ -1,8 +1,9 @@
 // https://rollupjs.org/guide/en/#configuration-files
-
-import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import svgr from '@svgr/rollup';
+import typescript from '@wessberg/rollup-plugin-ts';
+import url from '@rollup/plugin-url';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
@@ -25,7 +26,11 @@ export default {
   plugins: [
     resolve({ extensions }),
     commonjs(),
-    babel({ babelHelpers: 'bundled', extensions }),
+    typescript({
+      transpiler: 'babel',
+    }),
+    url({ emitFiles: false }),
+    svgr({ dimensions: false, memo: true, titleProp: true }),
   ],
   external: ['react', 'react-dom'],
 };
