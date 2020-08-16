@@ -15,12 +15,7 @@ module.exports = {
       rule.test.test('.svg')
         ? {
             ...rule,
-            test: new RegExp(
-              rule.test
-                .toString()
-                .replace(/\/|svg\|/g, '')
-                .trim('/'),
-            ),
+            test: new RegExp(rule.test.toString().replace(/\/|svg\|/g, '')),
           }
         : rule,
     );
