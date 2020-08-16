@@ -1,8 +1,0 @@
-{
-  "exclude": ["src/lib/**/*.test.*"],
-  "mode": "modules",
-  "out": "docs",
-  "plugin": "typedoc-plugin-markdown",
-  "readme": "none",
-  "tsconfig": "./tsconfig.json"
-}

@@ -35,7 +35,11 @@ export default Example;
 
 ### Documentation
 
-[Click here to view the documentation](./docs/README.md)
+| Property | Description         | Type   | Required | Default |
+| -------- | ------------------- | ------ | -------- | ------- |
+| headline | Set a headline text | string | Yes      | -       |
+
+> To get an interactive documentation with Storybook, clone the project and start it.
 
 ---
 
@@ -55,15 +59,15 @@ yarn install
 ### Scripts
 
 ```sh
-yarn start # start development server
+yarn start # start storybook
 yarn test # run jest tests and watch
 yarn test:all # run jest tests and watch all with coverage
 yarn lint # lint code with eslint
 yarn hint # hints for code with webhint
 yarn type-check # run type check for files
 yarn changelog # create/update the changelog
-yarn docs # create/update the docs
 yarn build # build production-ready component
+yarn build:storybook # build static storybook
 yarn commit # commitizen friendly commit helper
 ```
 
@@ -103,9 +107,8 @@ On **push** (git), the following commands are executed...
 On **publish** (yarn), the following commands are executed...
 
 - Lifecycle method `version`
-  - `yarn build` (`yarn build:bundle` + `yarn build:declaration`)
+  - `yarn build`
   - `yarn changelog`
-  - `yarn docs`
   - `git add`
 - Lifecycle method `postversion`
   - `git push`
@@ -116,7 +119,7 @@ On **publish** (yarn), the following commands are executed...
 ## Environment
 
 - [TypeScript](https://www.typescriptlang.org/)
-- [Create React App](https://create-react-app.dev/)
+- [Storybook](https://storybook.js.org/)
 
 ### Quality
 
