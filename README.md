@@ -62,6 +62,8 @@ yarn install
 yarn start # start storybook
 yarn test # run jest tests and watch
 yarn test:all # run jest tests and watch all with coverage
+yarn e2e # open cypress to start e2e tests manually
+yarn e2e:run # run cypress e2e tests
 yarn lint # lint code with eslint
 yarn hint # hints for code with webhint
 yarn type-check # run type check for files
@@ -78,11 +80,14 @@ You will need to define the following secrets to use this project with the initi
 ```ini
 # GitHub > Repository > Settings > Secrets
 SNYK_TOKEN=... # https://support.snyk.io/hc/en-us/articles/360004037537-Authentication-for-third-party-tools
+CYPRESS_PROJECT_ID=... # https://docs.cypress.io/guides/dashboard/projects.html#Setup
+CYPRESS_RECORD_KEY=... # https://docs.cypress.io/guides/dashboard/projects.html#Setup
 ```
 
 #### Jobs
 
-- test (run jest tests)
+- test (run jest tests: `yarn test:ci`)
+- e2e (run cypress tests: `yarn e2e:ci`)
 - security (check for vulnerabilities)
 
 ### Publish
