@@ -3,6 +3,8 @@
 
 # testing
 /coverage
+/cypress/screenshots
+/cypress/videos
 /hint-report
 
 # development
@@ -14,4 +16,4 @@
 
 # misc
 .DS_Store
-.env
+.env*
