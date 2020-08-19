@@ -11,6 +11,7 @@ module.exports = {
   ],
   stories: ['../src/stories/**/*.stories.tsx'],
   webpackFinal: async (config) => {
+    // * remove svg from file-loader test rule
     config.module.rules = config.module.rules.map((rule) =>
       rule.test.test('.svg')
         ? {
@@ -20,6 +21,7 @@ module.exports = {
         : rule,
     );
 
+    // * add rule to load svg with svgr and url-loader
     config.module.rules.push({
       test: /\.svg$/,
       use: [
