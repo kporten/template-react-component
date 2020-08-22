@@ -8,7 +8,7 @@ import url from '@rollup/plugin-url';
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 export default {
-  input: './src/lib/index.tsx',
+  input: './src/lib/index.ts',
   output: [
     {
       entryFileNames: '[name].[format].js',
