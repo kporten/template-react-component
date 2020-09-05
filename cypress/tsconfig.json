@@ -2,7 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "isolatedModules": false,
-    "types": ["cypress", "@types/testing-library__cypress"]
+    "types": ["cypress", "@testing-library/cypress"]
   },
   "exclude": []
 }
