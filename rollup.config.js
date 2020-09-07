@@ -5,6 +5,8 @@ import svgr from '@svgr/rollup';
 import typescript from '@wessberg/rollup-plugin-ts';
 import url from '@rollup/plugin-url';
 
+import pkg from './package.json';
+
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 export default {
@@ -32,5 +34,5 @@ export default {
     url({ emitFiles: false }),
     svgr({ dimensions: false, memo: true, titleProp: true }),
   ],
-  external: ['react', 'react-dom'],
+  external: Object.keys(pkg.peerDependencies),
 };

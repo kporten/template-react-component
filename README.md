@@ -92,8 +92,7 @@ CYPRESS_RECORD_KEY=... # https://docs.cypress.io/guides/dashboard/projects.html#
 
 ### Publish
 
-1. For external packages/dependencies, check if they should be added to your `rollup.config.js` in `external` and to your `package.json` in `peerDependencies` and `devDependencies`.
-2. Create a new version and publish your component to the registry with `yarn version`.
+Create a new version and publish your component to the registry with `yarn version`.
 
 On **commit** (git), the following commands are executed...
 
