@@ -34,5 +34,8 @@ export default {
     url({ emitFiles: false }),
     svgr({ dimensions: false, memo: true, titleProp: true }),
   ],
-  external: Object.keys(pkg.peerDependencies),
+  external: [
+    ...Object.keys(pkg.dependencies),
+    ...Object.keys(pkg.peerDependencies),
+  ],
 };
