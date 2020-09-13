@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "declaration": true,
     "emitDeclarationOnly": false,
     "esModuleInterop": true,
@@ -14,6 +15,10 @@
     "moduleResolution": "node",
     "noEmit": true,
     "outDir": "dist",
+    "paths": {
+      "@lib": ["./src/lib"],
+      "@lib/*": ["./src/lib/*"]
+    },
     "removeComments": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
