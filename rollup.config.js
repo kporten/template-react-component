@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import svgr from '@svgr/rollup';
 import typescript from '@wessberg/rollup-plugin-ts';
 import url from '@rollup/plugin-url';
+import subpathExternals from 'rollup-plugin-subpath-externals';
 
 import pkg from './package.json';
 
@@ -33,9 +34,6 @@ export default {
     }),
     url({ emitFiles: false }),
     svgr({ dimensions: false, memo: true, titleProp: true }),
-  ],
-  external: [
-    ...Object.keys(pkg.dependencies),
-    ...Object.keys(pkg.peerDependencies),
+    subpathExternals(pkg),
   ],
 };
