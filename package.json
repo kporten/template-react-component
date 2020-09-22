@@ -1,6 +1,6 @@
 {
   "name": "template-react-component",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "private": false,
   "license": "MIT",
   "description": "Template to develop a React component",
