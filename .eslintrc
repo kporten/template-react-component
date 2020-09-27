@@ -22,8 +22,13 @@
   ],
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-unnecessary-condition": "error",
     "global-require": "off",
     "import/no-extraneous-dependencies": "off",
+    "no-param-reassign": [
+      "error",
+      { "props": true, "ignorePropertyModificationsFor": ["draft"] }
+    ],
     "no-underscore-dangle": "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off",
@@ -32,6 +37,7 @@
     "unicorn/filename-case": "off",
     "unicorn/import-index": ["error", { "ignoreImports": true }],
     "unicorn/no-null": "off",
+    "unicorn/no-useless-undefined": "off",
     "unicorn/prevent-abbreviations": "off"
   },
   "overrides": [
