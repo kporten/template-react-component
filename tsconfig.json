@@ -1,20 +1,18 @@
+// https://www.typescriptlang.org/tsconfig
+// https://github.com/wessberg/rollup-plugin-ts/blob/master/README.md#ignoredoverridden-options
 {
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
     "declaration": true,
-    "emitDeclarationOnly": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
     "isolatedModules": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "lib": ["dom", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
-    "outDir": "dist",
     "paths": {
       "@lib": ["./src/lib"],
       "@lib/*": ["./src/lib/*"]
@@ -22,8 +20,7 @@
     "removeComments": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true,
-    "target": "es2017"
+    "strict": true
   },
   "exclude": ["cypress", "node_modules", "dist"]
 }

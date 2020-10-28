@@ -1,6 +1,10 @@
 // https://jestjs.io/docs/en/configuration
 module.exports = {
-  collectCoverageFrom: ['src/lib/**/*.ts?(x)', '!src/stories/**/*'],
+  collectCoverageFrom: [
+    'src/lib/**/*.ts?(x)',
+    '!src/lib/**/index.ts',
+    '!src/stories/**/*',
+  ],
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/__mocks__/file.mock.js',

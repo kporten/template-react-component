@@ -17,13 +17,13 @@ export default {
       entryFileNames: '[name].[format].js',
       dir: './dist/lib',
       format: 'cjs',
-      exports: 'auto',
+      exports: 'named',
     },
     {
       entryFileNames: '[name].[format].js',
       dir: './dist/lib',
       format: 'es',
-      exports: 'auto',
+      exports: 'named',
     },
   ],
   plugins: [

@@ -1,6 +1,5 @@
 // https://storybook.js.org/docs/react/writing-stories/introduction
-import React from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Story, Meta } from '@storybook/react/types-6-0';
 
 import Component from '@lib';
 
