@@ -14,8 +14,6 @@ Template to develop a React component with TypeScript. Clone it and adapt the RE
 
 ```sh
 yarn add template-react-component
-# or
-npm install template-react-component
 ```
 
 ### Example
@@ -23,7 +21,6 @@ npm install template-react-component
 `Example.tsx`
 
 ```tsx
-import React from 'react';
 import Component from 'template-react-component';
 
 const Example: React.FC = () => {
