@@ -6,14 +6,26 @@
 ![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)
 ![ci](https://github.com/kporten/template-react-component/workflows/CI/badge.svg?branch=master&event=push)
 
-Template to develop a React component with TypeScript. Clone it and adapt the README to your React component.
+Template to start easily with the development of a React component with TypeScript. Clone this repository and adapt this README to your React component.
+
+The code of your component is in the `src/lib` folder. The content of this folder will be bundled if you execute `yarn build`. Just start by modifying the file `Component.tsx` to your needs and see your changes by starting the project with `yarn start`.
+
+Export all externally required functions, components and variables in the package entry point `index.ts`. Then you can use these exports in other projects after you installed your package.
+
+To write unit tests (https://testing-library.com/) for your component(s) add a file next to your component with the file ending `.test.tsx`. Then execute your tests with `yarn test`.
+
+Document your component use cases as interactive stories (https://storybook.js.org/) by modifying the file `Component.stories.tsx` in `src/stories` and feel free to add more stories for other components or use cases.
+
+If you would like to write E2E tests (https://www.cypress.io/) for your whole project, you can find a sample file in `cypress/e2e`. Then execute your tests with `yarn e2e` together with `yarn start`.
+
+To publish your component, check your optional CI pipeline configuration (e.g. GitHub Actions) and create a new version with `yarn version` (automatic build and publish).
 
 ---
 
 ## Getting Started
 
 ```sh
-yarn add template-react-component
+yarn add [your-component-package]
 ```
 
 ### Example
@@ -21,7 +33,7 @@ yarn add template-react-component
 `Example.tsx`
 
 ```tsx
-import Component from 'template-react-component';
+import Component from '[your-component-package]';
 
 const Example: React.FC = () => {
   return <Component headline="Example" />;
