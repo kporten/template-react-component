@@ -11,6 +11,9 @@ module.exports = {
     '\\.svg$': '<rootDir>/__mocks__/svg.mock.js',
     '\\.(css|less)$': 'identity-obj-proxy',
   },
-  setupFilesAfterEnv: ['./jest.setup.js', './__mocks__/matchMedia.mock.js'],
+  setupFilesAfterEnv: [
+    '<rootDir>/jest.setup.js',
+    '<rootDir>/__mocks__/matchMedia.mock.js',
+  ],
   testMatch: ['**/*.test.ts?(x)'],
 };
