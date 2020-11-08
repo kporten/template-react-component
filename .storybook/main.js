@@ -1,15 +1,8 @@
 // https://storybook.js.org/docs/react/configure/overview
 module.exports = {
-  addons: [
-    '@storybook/addon-a11y',
-    '@storybook/addon-actions',
-    '@storybook/addon-backgrounds',
-    '@storybook/addon-docs',
-    '@storybook/addon-controls',
-    '@storybook/addon-toolbars',
-    '@storybook/addon-viewport',
-  ],
+  addons: ['@storybook/addon-a11y', '@storybook/addon-essentials'],
   stories: ['../src/stories/**/*.stories.tsx'],
+  // * make the storybook webpack config compatible with the rollup build config
   webpackFinal: async (config) => {
     // * remove svg from file-loader test rule
     config.module.rules = config.module.rules.map((rule) =>
