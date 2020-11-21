@@ -6,12 +6,9 @@ import Component from '@lib';
 export default {
   title: 'Component',
   component: Component,
-  argTypes: {
-    headline: { control: 'text' },
-  },
 } as Meta;
 
-type ComponentProps = React.ComponentPropsWithoutRef<typeof Component>;
+type ComponentProps = React.ComponentProps<typeof Component>;
 
 const Template: Story<ComponentProps> = (args) => <Component {...args} />;
 
