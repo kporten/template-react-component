@@ -5,7 +5,6 @@
 /coverage
 /cypress/screenshots
 /cypress/videos
-/hint-report
 
 # development
 *.log

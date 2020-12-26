@@ -5,5 +5,5 @@ import Component from './Component';
 
 it('should render my component', () => {
   render(<Component headline="test" />);
-  expect(screen.getByRole('heading')).toBeVisible();
+  expect(screen.getByRole('heading')).toHaveTextContent('test');
 });

@@ -14,5 +14,5 @@ const Template: Story<ComponentProps> = (args) => <Component {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
-  headline: 'test',
+  headline: 'My Component',
 };

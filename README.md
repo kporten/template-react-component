@@ -74,7 +74,6 @@ yarn test:all # run jest tests and watch all with coverage
 yarn e2e # open cypress to start e2e tests manually
 yarn e2e:run # run cypress e2e tests
 yarn lint # lint code with eslint
-yarn hint # hints for code with webhint
 yarn type-check # run type check for files
 yarn changelog # create/update the changelog
 yarn build # build production-ready component
@@ -93,6 +92,8 @@ CYPRESS_PROJECT_ID=... # https://docs.cypress.io/guides/dashboard/projects.html#
 CYPRESS_RECORD_KEY=... # https://docs.cypress.io/guides/dashboard/projects.html#Setup
 ```
 
+Extend the script `e2e:run` in the `package.json` file with `--records` if you have defined the record key.
+
 #### Jobs
 
 - test (run jest tests: `yarn test:ci`)
@@ -108,7 +109,6 @@ On **commit** (git), the following commands are executed...
 - Hook `pre-commit`
   - `yarn type-check`
   - `yarn lint`
-  - `yarn hint`
 - Hook `commit-msg`
   - `commitlint`
 
@@ -137,7 +137,6 @@ On **publish** (yarn), the following commands are executed...
 ### Quality
 
 - [ESLint](https://eslint.org/)
-- [WebHint](https://webhint.io/)
 - [Prettier](https://prettier.io/)
 - [Snyk](https://snyk.io/)
 

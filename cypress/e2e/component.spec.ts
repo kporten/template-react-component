@@ -5,6 +5,6 @@ describe('Component', () => {
   });
 
   it('should display the correct headline', () => {
-    cy.findByText('test').should('be.visible');
+    cy.findByText(/my component/i).should('be.visible');
   });
 });

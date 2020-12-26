@@ -14,13 +14,14 @@ module.exports = {
         : rule,
     );
 
-    // * add rule to load svg with svgr and url-loader
+    // * add rule to load svg with svgr and url-loader (same config as for rollup to get the same behavior)
     config.module.rules.push({
       test: /\.svg$/,
       use: [
         {
           loader: '@svgr/webpack',
           options: {
+            namedExport: 'ReactComponent',
             dimensions: false,
             memo: true,
             titleProp: true,
@@ -28,9 +29,6 @@ module.exports = {
         },
         {
           loader: 'url-loader',
-          options: {
-            emitFiles: false,
-          },
         },
       ],
     });
