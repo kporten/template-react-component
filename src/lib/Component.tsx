@@ -1,4 +1,5 @@
 import { ReactComponent as Heart } from './assets/Heart.svg';
+import { version } from '../../package.json';
 
 type ComponentProps = {
   headline: string;
@@ -15,6 +16,7 @@ const Component: React.FC<ComponentProps> = ({ headline }) => (
         {headline}
       </h1>
       <Heart className="w-8 h-8 text-red-600 animate-pulse" />
+      <div className="mt-4 text-gray-400">v{version}</div>
     </div>
   </>
 );

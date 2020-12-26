@@ -1,9 +1,11 @@
 // https://rollupjs.org/guide/en/#configuration-files
 import commonjs from '@rollup/plugin-commonjs';
+import del from 'rollup-plugin-delete';
+import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import subpathExternals from 'rollup-plugin-subpath-externals';
 import svgr from '@svgr/rollup';
-import typescript from '@wessberg/rollup-plugin-ts';
+import ts from '@wessberg/rollup-plugin-ts';
 import url from '@rollup/plugin-url';
 
 import pkg from './package.json';
@@ -27,11 +29,17 @@ export default {
     },
   ],
   plugins: [
+    // * clean output dir
+    del({ targets: 'dist' }),
+    // * resolve imports
     resolve({ extensions }),
     commonjs(),
-    typescript({
+    json(),
+    // * transpile TypeScript and generate type declaration files
+    ts({
       transpiler: 'babel',
     }),
+    // * image handling (see also storybook config)
     url(),
     svgr({
       namedExport: 'ReactComponent',
@@ -39,6 +47,7 @@ export default {
       memo: true,
       titleProp: true,
     }),
+    // * externalize all dependencies, even subpath imports
     subpathExternals(pkg),
   ],
 };
