@@ -83,7 +83,7 @@ yarn commit # commitizen friendly commit helper
 
 ### GitHub Actions
 
-You will need to define the following secrets to use this project with the initial workflow configuration.
+You will need to define the following secrets in your repository settings to use this project with the initial workflow configuration.
 
 ```ini
 # GitHub > Repository > Settings > Secrets
