@@ -25,6 +25,12 @@
     "@typescript-eslint/no-unnecessary-condition": "error",
     "global-require": "off",
     "import/no-extraneous-dependencies": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": ["error", "info", "warn"]
+      }
+    ],
     "no-param-reassign": [
       "error",
       { "props": true, "ignorePropertyModificationsFor": ["draft"] }
