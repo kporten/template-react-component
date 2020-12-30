@@ -117,7 +117,7 @@ On **push** (git), the following commands are executed...
 - Hook `pre-push`
   - `yarn test:ci`
 
-On **publish** (yarn), the following commands are executed...
+On **version** (yarn), the following commands are executed...
 
 - Lifecycle method `version`
   - `yarn build`
@@ -131,6 +131,7 @@ On **publish** (yarn), the following commands are executed...
 
 ## Environment
 
+- [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Storybook](https://storybook.js.org/)
 
