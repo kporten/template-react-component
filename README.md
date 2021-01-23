@@ -145,6 +145,7 @@ On **version** (yarn), the following commands are executed...
 
 - [Testing Library](https://testing-library.com/)
 - [Jest](https://jestjs.io/)
+- [Cypress](https://www.cypress.io)
 
 ### Other
 
