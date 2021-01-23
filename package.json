@@ -22,7 +22,7 @@
     "e2e": "cypress open",
     "e2e:run": "cypress run",
     "e2e:ci": "start-server-and-test start:ci 9009 e2e:run",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+    "lint": "eslint --cache --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
     "type-check": "tsc --project ./tsconfig.json && tsc --project ./cypress/tsconfig.json",
     "changelog": "auto-changelog --package --template keepachangelog --sort-commits relevance",
     "build": "rollup -c",
