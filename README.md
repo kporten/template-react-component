@@ -63,6 +63,7 @@ export default Example;
 
 ```sh
 yarn install
+yarn husky install # enable git hooks
 ```
 
 ### Scripts
@@ -72,7 +73,6 @@ yarn start # start storybook
 yarn test # run jest tests and watch
 yarn test:all # run jest tests and watch all with coverage
 yarn e2e # open cypress to start e2e tests manually
-yarn e2e:run # run cypress e2e tests
 yarn lint # lint code with eslint
 yarn type-check # run type check for files
 yarn changelog # create/update the changelog
@@ -111,11 +111,6 @@ On **commit** (git), the following commands are executed...
   - `yarn lint`
 - Hook `commit-msg`
   - `commitlint`
-
-On **push** (git), the following commands are executed...
-
-- Hook `pre-push`
-  - `yarn test:ci`
 
 On **version** (yarn), the following commands are executed...
 
