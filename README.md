@@ -1,3 +1,5 @@
+> :warning: this project has been replaced by https://github.com/kporten/template-react and is no longer maintained.
+
 # Template React Component
 
 ![license](https://img.shields.io/github/license/kporten/template-react-component)
